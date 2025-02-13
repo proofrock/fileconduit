@@ -162,9 +162,10 @@ In the root dir of this repository, use `docker`:
 
 [source,bash]
 ----
-docker buildx build . \
- --build-arg VERSION=<version> \
+docker buildx build .                      \
+ --build-arg VERSION=<version>             \
  --build-arg SOURCE_DATE_EPOCH=$(date +%s) \
+ --output ./                               \
  -f Dockerfile.binary
 ----
 
